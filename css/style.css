@@ -8,6 +8,7 @@ body{
 header{
     text-align:left;
     line-height: 2em;
+    font-size:1em;
 }
 header h1{
     padding:10px;
@@ -20,14 +21,8 @@ header a{
     text-decoration: none;
 }
 section{
-    margin-top:100px;
+    margin-top:50px;
     clear:both;
-
-}
-footer{
-    margin-top:200px;
-    background:black;
-    color:white;
 }
 .container{
     width:600px;
@@ -58,7 +53,6 @@ fieldset ul li{
     width: 100%;
     background: #EAEAEA;
 }
-
 .header-gnb {
     width: 100%;
     margin: 0 auto;
@@ -67,11 +61,10 @@ fieldset ul li{
     text-align: center;
     background: #246fbb
 }
-
 .header-gnb > li {
     display: inline-block;
     width:  20%;
-    position: static;
+    position: relative;
     cursor: pointer;
 }
 .header-gnb > li > div {
@@ -79,30 +72,28 @@ fieldset ul li{
     width: 100%;
     text-align: center;
 }
-
 .header-gnb > li:hover > ul {
     display: block; 
     background:rgb(98, 171, 219);
-} 
-
+}
 .header-gnb > li > ul {
     display: none;
     margin: 0;
-    padding: 10px;
     background: #246fbb;
-    border-top: 1px solid white;
     list-style: none;
     position: absolute;
     left: 0;
     right: 0;
-    top: auto;
 }
-
 .header-gnb > li > ul > li > a {
     display: inline-block;
-    width: 100%;
-    padding: 5px;
+    padding: 3px;
+    font-size:0.8em;
 }
 footer{
+    margin-top:200px;
+    background:black;
+    color:white;
     text-align:center;
+    font-size:0.8em;
 }
