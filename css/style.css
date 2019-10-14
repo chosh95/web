@@ -5,6 +5,9 @@
 body{
     background:white;
 }
+hr{
+    width:100%;
+}
 header{
     text-align:left;
     line-height: 2em;
@@ -43,7 +46,8 @@ fieldset{
 fieldset legend{
     font-weight:bold;
     font-size: 18px;
-    color:purple;
+    color:#246fbb;
+    margin-left:10px;
 }
 fieldset ul li{
     margin-bottom: 10px;
