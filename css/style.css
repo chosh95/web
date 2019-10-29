@@ -1,0 +1,118 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    background:white;
+}
+.wrap{
+    min-height:100%;
+    position: relative;
+    padding-bottom:52px;
+}
+hr{
+    width:100%;
+}
+header{
+    text-align:left;
+    line-height: 2em;
+    font-size:1em;
+}
+header h1{
+    padding:10px;
+    background: #246fbb;
+    height:40px;
+    text-align:center;
+}
+header a{
+    color:white;
+    text-decoration: none;
+}
+section{
+    margin-top:50px;
+    margin-bottom: 50px;
+    clear:both;
+}
+.container{
+    width:600px;
+    margin: 0 auto;
+}
+.container ul{
+    list-style-type: none;
+}
+label.title{
+    width: 80px;
+}
+div.center{
+    text-align:center;
+    text-decoration:none;
+}
+fieldset{
+    margin: 15px 10px;
+}
+fieldset legend{
+    font-weight:bold;
+    font-size: 18px;
+    color:#246fbb;
+    margin-left:10px;
+}
+fieldset ul li{
+    margin-bottom: 10px;
+    margin-left:10px;
+}
+.header {
+    width: 100%;
+    background: #EAEAEA;
+}
+.header-gnb {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: #246fbb
+}
+.header-gnb > li {
+    display: inline-block;
+    width:  20%;
+    position: relative;
+    cursor: pointer;
+}
+.header-gnb > li > div {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+.header-gnb > li:hover > ul {
+    display: block; 
+    background:rgb(98, 171, 219);
+}
+.header-gnb > li > ul {
+    display: none;
+    margin: 0;
+    background: #246fbb;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.header-gnb > li > ul > li > a {
+    display: inline-block;
+    padding: 3px;
+    font-size:0.8em;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:black;
+    color:white;
+    text-align:center;
+    font-size:0.8em;
+}
