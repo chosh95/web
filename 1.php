@@ -1,22 +1,18 @@
 <?php
-	$name = $_POST['name'];
 	$style1 = "style1";
 	$target = 'input_image/'.$style1;
-	$style1_type = $_FILES['style1']['type'];
 	$tmp_name = $_FILES['style1']['tmp_name'];
-	$error = $_FILES['style1']['error'];
 	move_uploaded_file($tmp_name,$target);
 	
-	$name = $_POST['name'];
 	$content1 = "content1";
 	$target = 'input_image/'.$content1;
-	$content1_type = $_FILES['content1']['type'];
 	$tmp_name = $_FILES['content1']['tmp_name'];
-	$error = $_FILES['content1']['error'];
 	move_uploaded_file($tmp_name,$target);
 
 	chdir('/home/cho/FastPhotoStyle-master');
-	exec("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
+    exec("python demo.py --content_image_path /var/www/html/input_image/content1 \
+                        --style_image_path /var/www/html/input_image/style1 \
+                        --output_image_path /var/www/html/result_image/result.png");
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +25,7 @@
 <body>
     <div class="wrap">
         <header>
-            <h1><a href="index.html">Style Transfer</a></h1>
+            <h1 class="head"><a href="index.html">Style Transfer</a></h1>
             <nav>   
                 <div class="header">
                     <ul class="header-gnb">

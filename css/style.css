@@ -18,6 +18,9 @@ body{
 hr{
     width:100%;
 }
+.head{
+    padding-bottom:40px;
+}
 header{
     text-align:left;
     line-height: 2em;

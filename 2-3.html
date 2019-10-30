@@ -8,7 +8,7 @@
 <body>
     <div class="wrap">
         <header>
-            <h1><a href="index.html">Style Transfer</a></h1>
+            <h1 class="head"><a href="index.html">Style Transfer</a></h1>
             <nav>   
                 <div class="header">
                     <ul class="header-gnb">
@@ -28,17 +28,17 @@
         <section>
             <div class="container">
                 <h1>Label을 이용한 Style Transfer</h1>
-                <form>
+                <form action="http://localhost/2.php" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <legend>사진 파일</legend>
                         <ul>
                             <li>
                                 <label for="image_uploads" class="title">Content Image (PNG, JPG)</label>
-                                <input type="file" name="content_img" accept=".jpg, .jpeg, .png">
+                                <input type="file" name="content2" id="content2" accept=".jpg, .jpeg, .png">
                             </li>
                             <li>
                                 <label for="image_uploads" class="title">Style Image (PNG, JPG)</label>
-                                <input type="file" name="style_img" accept=".jpg, .jpeg, .png">
+                                <input type="file" name="style2" id="style2" accept=".jpg, .jpeg, .png">
                             </li>
                         </ul>
                     </fieldset>
@@ -47,37 +47,42 @@
                         <ul>
                             <li>
                                 <label for="file_uploads" class="title">Content Label (JSON)</label>
-                                <input type="file" name="content_seg" accept=".json">
+                                <input type="file" name="content_seg" id="content_seg" accept=".json">
                             </li>
                             <li>
                                 <label for="file_uploads" class="title">Style Label (JSON)</label>
-                                <input type="file" name="Style_seg" accept=".json">
+                                <input type="file" name="Style_seg" id="Style_seg" accept=".json">
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset>
                         <legend>변환 정도</legend>
+                        <h5>(※1은 100% 변환이고 0은 변환하지 않는 것입니다.※)</h5>
                         <ul>
                             <li>
                                 <label for="background" class="title">배경 변환 정도</label>
-                                <input type="number" min="-10" max="10" step="0.1" value="1">
+                                <input type="number" min="-10" max="10" step="0.1" value="1" name="label_0">
                             </li>
                             <li>
                                 <label for="background" class="title">1번 label 변환 정도</label>
-                                <input type="number" min="-10" max="10" step="0.1" value="1">
+                                <input type="number" min="-10" max="10" step="0.1" value="1" name="label_1">
                             </li>
                             <li>
                                 <label for="background" class="title">2번 label 변환 정도</label>
-                                <input type="number" min="-10" max="10" step="0.1" value="1">
+                                <input type="number" min="-10" max="10" step="0.1" value="1" name="label_2">
                             </li>
                             <li>
                                 <label for="background" class="title">3번 label 변환 정도</label>
-                                <input type="number" min="-10" max="10" step="0.1" value="1">
+                                <input type="number" min="-10" max="10" step="0.1" value="1" name="label_3">
+                            </li>
+                            <li>
+                                <label for="background" class="title">4번 label 변환 정도</label>
+                                <input type="number" min="-10" max="10" step="0.1" value="1" name="label_4">
                             </li>
                         </ul>
                     </fieldset>
                     <div class="center">
-                        <input type="submit" value="전환하기">
+                        <input type="submit" value="전환하기" name="submit">
                     </div>
                 </form> 
             </div>
