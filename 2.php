@@ -1,9 +1,9 @@
 <?php
-    $label_0 = (int)$_POST['label_0'];
-    $label_1 = (int)$_POST['label_1'];
-    $label_2 = (int)$_POST['label_2'];
-    $label_3 = (int)$_POST['label_3'];
-    $label_4 = (int)$_POST['label_4'];
+    $label0 = (float)$_POST['label_0'];
+    $label1 = (float)$_POST['label_1'];
+    $label2 = (float)$_POST['label_2'];
+    $label3 = (float)$_POST['label_3'];
+    $label4 = (float)$_POST['label_4'];
 
 	$content2 = "content2";
 	$target = 'input_image/'.$content2;
@@ -26,16 +26,11 @@
     move_uploaded_file($tmp_name,$target);
 
     chdir('input_image');
-    exec('labelme_json_to_dataset content_seg.json -o content_seg');
-    exec('labelme_json_to_dataset style_seg.json -o style_seg');
+    exec('labelme_json_to_dataset content_seg -o content2_seg');
+    exec('labelme_json_to_dataset style_seg -o style2_seg');
 
     chdir('/home/cho/FastPhotoStyle-master');
-    exec('python demo.py --content_image_path /var/www/html/input_image/content2 \
-                        --style_image_path /var/www/html/input_image/style2 \
-                        --output_image_path /var/www/html/result_image/result2.png \
-                        --style_seg_path /var/www/html/input_image/style_seg/label.png \
-                        --content_seg_path /var/www/html/input_image/content_seg/label.png\
-                        --label_weight $label_0 $lable_1 $lable_2 $lable_3 $lable_4');
+    exec("python demo.py --content_image_path /var/www/html/input_image/content2 --style_image_path /var/www/html/input_image/style2 --output_image_path /var/www/html/result_image/result2.png --content_seg_path /var/www/html/input_image/content2_seg/label.png --style_seg_path /var/www/html/input_image/style2_seg/label.png --label_weight $label0 $label1 $label2 $label3 $label4");
 ?>
 
 <!DOCTYPE html>
