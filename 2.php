@@ -25,9 +25,15 @@
 	$tmp_name = $_FILES['style_seg']['tmp_name'];
     move_uploaded_file($tmp_name,$target);
 
-    chdir('input_image');
-    exec('labelme_json_to_dataset content_seg -o content2_seg');
-    exec('labelme_json_to_dataset style_seg -o style2_seg');
+	chdir('/var/www/html/input_image');
+	exec('chmod 777 *');	
+	exec('labelme_json_to_dataset content_seg -o content2_seg');
+	exec('labelme_json_to_dataset style_seg -o style2_seg');
+	chdir('/var/www/html/input_image/content2_seg');
+	exec('chmod 777 label.png');
+	chdir('/var/www/html/input_image/style2_seg');
+	exec('chmod 777 label.png');
+	chdir('/var/www/html/input_image');
 
     chdir('/home/cho/FastPhotoStyle-master');
     exec("python demo.py --content_image_path /var/www/html/input_image/content2 --style_image_path /var/www/html/input_image/style2 --output_image_path /var/www/html/result_image/result2.png --content_seg_path /var/www/html/input_image/content2_seg/label.png --style_seg_path /var/www/html/input_image/style2_seg/label.png --label_weight $label0 $label1 $label2 $label3 $label4");

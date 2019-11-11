@@ -1,10 +1,4 @@
 <?php
-	chdir('/input_image');
-	exec("rm content1.png");
-	exec("rm style1.png");
-	chdir("../result_image");
-	exec("rm result.png");
-
 	$style1 = "style1";
 	$target = 'input_image/'.$style1;
 	$tmp_name = $_FILES['style1']['tmp_name'];
@@ -14,9 +8,12 @@
 	$target = 'input_image/'.$content1;
 	$tmp_name = $_FILES['content1']['tmp_name'];
 	move_uploaded_file($tmp_name,$target);
-
+	
+	chdir('/var/www/html/input_image');
+	exec('chmod 777 content1');
+	exec('chmod 777 style1');
 	chdir('/home/cho/FastPhotoStyle-master');
-    	exec("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
+    	system("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
 ?>
 
 <!DOCTYPE html>
