@@ -13,7 +13,7 @@
 	exec('chmod 777 content1');
 	exec('chmod 777 style1');
 	chdir('/home/cho/FastPhotoStyle-master');
-    	system("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
+    	exec("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
 ?>
 
 <!DOCTYPE html>
