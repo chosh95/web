@@ -1,4 +1,5 @@
 <?php
+
 	$style1 = "style1";
 	$target = 'input_image/'.$style1;
 	$tmp_name = $_FILES['style1']['tmp_name'];
@@ -14,6 +15,7 @@
 	exec('chmod 777 style1');
 	chdir('/home/cho/FastPhotoStyle-master');
     exec("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
+	chdir('/var/www/html');
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,9 @@
 <body>
     <div class="wrap">
         <header>
-            <h1 class="head"><a href="index.html">Style Transfer</a></h1>
+            <h1 class="head">
+		<a href="index.html">Style Transfer</a>
+	    </h1>
             <nav>   
                 <div class="header">
                     <ul class="header-gnb">
@@ -48,8 +52,8 @@
                 <h2>원본 이미지</h2>
                 <div class="center">
                 <p>
-                    <img src="input_image/content1" width="49%">
-                    <img src="input_image/style1" width="49%">
+                    <img src="http://221.148.109.125/input_image/content1" width="49%">
+                    <img src="http://221.148.109.125/input_image/style1" width="49%">
                 </p>
                 </div>
             </div>
@@ -58,8 +62,8 @@
             <div class="container">
                 <h2>결과 이미지</h2>
 		<div class="center">
-			<p><img src="result_image/result.png" width="100%"></p>
-			<a href="result_image/result.png" download>이미지 다운로드</a>
+			<p><img src="http://221.148.109.125/result_image/result.png" width="100%"></p>
+			<a href="http://221.148.109.125/result_image/result.png" download>이미지 다운로드</a>
 		</div>
             </div>
         </section>
