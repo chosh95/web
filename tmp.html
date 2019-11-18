@@ -1,21 +1,3 @@
-<?php
-	$style1 = "style1";
-	$target = 'input_image/'.$style1;
-	$tmp_name = $_FILES['style1']['tmp_name'];
-	move_uploaded_file($tmp_name,$target);
-	
-	$content1 = "content1";
-	$target = 'input_image/'.$content1;
-	$tmp_name = $_FILES['content1']['tmp_name'];
-	move_uploaded_file($tmp_name,$target);
-	
-	chdir('/var/www/html/input_image');
-	exec('chmod 777 content1');
-	exec('chmod 777 style1');
-	chdir('/home/cho/FastPhotoStyle-master');
-    exec("python demo.py --content_image_path /var/www/html/input_image/content1 --style_image_path /var/www/html/input_image/style1 --output_image_path /var/www/html/result_image/result.png");
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,16 +33,16 @@
                     <img src="input_image/content1" width="49%">
                     <img src="input_image/style1" width="49%">
                 </p>
-                </div>
+            </div>
             </div>
         </section>
         <section>
             <div class="container">
                 <h2>결과 이미지</h2>
-		<div class="center">
-			<p><img src="result_image/result.png" width="100%"></p>
-			<a href="result_image/result.png" download>이미지 다운로드</a>
-		</div>
+                <div class="center">
+                    <p><img src="result_image/result.png" width="100%"></p>
+                    <a href="result_image/result.png" download>이미지 다운로드</a>
+                </div>
             </div>
         </section>
         <footer>
