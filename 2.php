@@ -79,6 +79,17 @@
         </section>
         <section>
             <div class="container">
+                <h2>레이블 이미지</h2>
+                <div class="center">
+                <p>
+                    <img src="input_image/content2_seg/label_viz.png" width="49%">
+                    <img src="input_image/style2_seg/label_viz.png" width="49%">
+                </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
                 <h2>결과 이미지</h2>
 		<p> <img src="result_image/result2.png" width="100%"> </p>
 		<div class="center">
