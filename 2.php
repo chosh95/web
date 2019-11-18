@@ -8,35 +8,35 @@
 	$content2 = "content2";
 	$target = 'input_image/'.$content2;
 	$tmp_name = $_FILES['content2']['tmp_name'];
-    move_uploaded_file($tmp_name,$target);
+	move_uploaded_file($tmp_name,$target);
     
 	$style2 = "style2";
 	$target = 'input_image/'.$style2;
 	$tmp_name = $_FILES['style2']['tmp_name'];
 	move_uploaded_file($tmp_name,$target);
 
-    $content_seg = "content_seg";
+   	$content_seg = "content_seg";
 	$target = 'input_image/'.$content_seg;
 	$tmp_name = $_FILES['content_seg']['tmp_name'];
-    move_uploaded_file($tmp_name,$target);
+    	move_uploaded_file($tmp_name,$target);
 
-    $style_seg = "style_seg";
+    	$style_seg = "style_seg";
 	$target = 'input_image/'.$style_seg;
 	$tmp_name = $_FILES['style_seg']['tmp_name'];
-    move_uploaded_file($tmp_name,$target);
+	move_uploaded_file($tmp_name,$target);
 
 	chdir('/var/www/html/input_image');
 	exec('chmod 777 *');	
 	exec('labelme_json_to_dataset content_seg -o content2_seg');
 	exec('labelme_json_to_dataset style_seg -o style2_seg');
+	exec('chmod 777 *');	
 	chdir('/var/www/html/input_image/content2_seg');
-	exec('chmod 777 label.png');
+	exec('chmod 777 label.png label_viz.png');
 	chdir('/var/www/html/input_image/style2_seg');
-	exec('chmod 777 label.png');
-	chdir('/var/www/html/input_image');
+	exec('chmod 777 label.png label_viz.png');
 
-    chdir('/home/cho/FastPhotoStyle-master');
-    exec("python demo.py --content_image_path /var/www/html/input_image/content2 --style_image_path /var/www/html/input_image/style2 --output_image_path /var/www/html/result_image/result2.png --content_seg_path /var/www/html/input_image/content2_seg/label.png --style_seg_path /var/www/html/input_image/style2_seg/label.png --label_weight $label0 $label1 $label2 $label3 $label4");
+	chdir('/home/cho/FastPhotoStyle-master');
+	exec("python demo.py --content_image_path /var/www/html/input_image/content2 --style_image_path /var/www/html/input_image/style2 --output_image_path /var/www/html/result_image/result2.png --content_seg_path /var/www/html/input_image/content2_seg/label.png --style_seg_path /var/www/html/input_image/style2_seg/label.png --label_weight $label0 $label1 $label2 $label3 $label4");
 ?>
 
 <!DOCTYPE html>
