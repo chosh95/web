@@ -103,6 +103,8 @@ fieldset ul li{
     position: absolute;
     left: 0;
     right: 0;
+}.header-gnb > li > ul >li:hover {
+    background:#5a8ece
 }
 .header-gnb > li > ul > li > a {
     display: inline-block;
