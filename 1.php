@@ -52,8 +52,8 @@
                 <h2>원본 이미지</h2>
                 <div class="center">
                 <p>
-                    <img src="http://221.148.109.125/input_image/content1" width="49%">
-                    <img src="http://221.148.109.125/input_image/style1" width="49%">
+                    <img src="http://221.148.108.156/input_image/content1" width="49%">
+                    <img src="http://221.148.108.156/input_image/style1" width="49%">
                 </p>
                 </div>
             </div>
@@ -62,8 +62,8 @@
             <div class="container">
                 <h2>결과 이미지</h2>
 		<div class="center">
-			<p><img src="http://221.148.109.125/result_image/result.png" width="100%"></p>
-			<a href="http://221.148.109.125/result_image/result.png" download>이미지 다운로드</a>
+			<p><img src="http://221.148.108.156/result_image/result.png" width="100%"></p>
+			<a href="http://221.148.108.156/result_image/result.png" download>이미지 다운로드</a>
 		</div>
             </div>
         </section>

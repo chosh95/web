@@ -71,8 +71,8 @@
                 <h2>원본 이미지</h2>
                 <div class="center">
                 <p>
-                    <img src="http://221.148.109.125/input_image/content2" width="49%">
-                    <img src="http://221.148.109.125/input_image/style2" width="49%">
+                    <img src="http://221.148.108.156/input_image/content2" width="49%">
+                    <img src="http://221.148.108.156/input_image/style2" width="49%">
                 </p>
                 </div>
             </div>
@@ -82,8 +82,8 @@
                 <h2>레이블 이미지</h2>
                 <div class="center">
                 <p>
-                    <img src="http://221.148.109.125/input_image/content2_seg/label_viz.png" width="49%">
-                    <img src="http://221.148.109.125/input_image/style2_seg/label_viz.png" width="49%">
+                    <img src="http://221.148.108.156/input_image/content2_seg/label_viz.png" width="49%">
+                    <img src="http://221.148.108.156/input_image/style2_seg/label_viz.png" width="49%">
                 </p>
                 </div>
             </div>
@@ -91,9 +91,9 @@
         <section>
             <div class="container">
                 <h2>결과 이미지</h2>
-		<p> <img src="http://221.148.109.125/result_image/result2.png" width="100%"> </p>
+		<p> <img src="http://221.148.108.156/result_image/result2.png" width="100%"> </p>
 		<div class="center">
-			<a href="http://221.148.109.125/result_image/result2.png" download>이미지 다운로드</a>
+			<a href="http://221.148.108.156/result_image/result2.png" download>이미지 다운로드</a>
 		</div>
             </div>
         </section>
